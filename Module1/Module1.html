@@ -9,6 +9,7 @@
 <p id="target1"></p>
 <p id="target2"></p>
 <p id="target3"></p>
+<p id="target4"></p>
     <script>
         /*
         'use strict';
@@ -19,7 +20,6 @@
         const name = prompt('type your name');
         console.log('Nice to meet you, ' + name)
         document.querySelector('#target').innerHTML = 'Hello, ' + name + '!';
-         */
 
         // part 3
         const int1 = parseInt(prompt('enter a number: '));
@@ -34,6 +34,24 @@
         document.querySelector('#target2').innerHTML = 'product =' + " " + product;
         document.querySelector('#target3').innerHTML = 'average =' + " " + average;
 
+        // part 4
+        const name = prompt('What is your name? ')
+        const rndInt = Math.floor(Math.random() * 4) + 1
+        if (rndInt == 1) {
+          document.querySelector('#target4').innerHTML = name + ", You are in Gryffindor";
+        }
+        else if (rndInt == 2) {
+          document.querySelector('#target4').innerHTML = name + ", You are in Slytherin";
+        }
+        else if (rndInt == 3) {
+          document.querySelector('#target4').innerHTML = name + ", You are in Hufflepuff";
+        }
+        else {
+          document.querySelector('#target4').innerHTML = name + ", You are in Ravenclaw";
+        }
+         */
+
+        //part 5
 
 
     </script>
