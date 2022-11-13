@@ -10,6 +10,7 @@
 <p id="target2"></p>
 <p id="target3"></p>
 <p id="target4"></p>
+<p id="target5"></p>
     <script>
         /*
         'use strict';
@@ -52,6 +53,17 @@
          */
 
         //part 5
+        function leapYear(year) {
+          if ((0 == year%4) && (0 != year % 100) || (0 == year % 400)) {
+            document.querySelector('#target5').innerHTML = year + ", is a leap year";
+          }
+          else {
+            document.querySelector('#target5').innerHTML = year + ", is not a leap year";
+          }
+        }
+
+        const year = prompt('Enter a year: ')
+        leapYear(year)
 
 
     </script>
