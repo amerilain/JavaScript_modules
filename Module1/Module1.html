@@ -12,79 +12,91 @@
 <p id="target4"></p>
 <p id="target5"></p>
 <p id="target6"></p>
-    <script>
-        /*
-        'use strict';
-        // part 1
-        console.log("I have awaken")
+<p id="target7"></p>
+<script>
+  /*
+  'use strict';
+  // part 1
+  console.log("I have awaken")
 
-        //part 2
-        const name = prompt('type your name');
-        console.log('Nice to meet you, ' + name)
-        document.querySelector('#target').innerHTML = 'Hello, ' + name + '!';
+  //part 2
+  const name = prompt('type your name');
+  console.log('Nice to meet you, ' + name)
+  document.querySelector('#target').innerHTML = 'Hello, ' + name + '!';
 
-        // part 3
-        const int1 = parseInt(prompt('enter a number: '));
-        const int2 = parseInt(prompt('enter a number: '));
-        const int3 = parseInt(prompt('enter a number: '));
+  // part 3
+  const int1 = parseInt(prompt('enter a number: '));
+  const int2 = parseInt(prompt('enter a number: '));
+  const int3 = parseInt(prompt('enter a number: '));
 
-        sum = int1 + int2 + int3;
-        product = int1 * int2 * int3;
-        average = sum / 3;
+  sum = int1 + int2 + int3;
+  product = int1 * int2 * int3;
+  average = sum / 3;
 
-        document.querySelector('#target1').innerHTML = 'sum =' + " " + sum;
-        document.querySelector('#target2').innerHTML = 'product =' + " " + product;
-        document.querySelector('#target3').innerHTML = 'average =' + " " + average;
+  document.querySelector('#target1').innerHTML = 'sum =' + " " + sum;
+  document.querySelector('#target2').innerHTML = 'product =' + " " + product;
+  document.querySelector('#target3').innerHTML = 'average =' + " " + average;
 
-        // part 4
-        const name = prompt('What is your name? ')
-        const rndInt = Math.floor(Math.random() * 4) + 1
-        if (rndInt == 1) {
-          document.querySelector('#target4').innerHTML = name + ", You are in Gryffindor";
-        }
-        else if (rndInt == 2) {
-          document.querySelector('#target4').innerHTML = name + ", You are in Slytherin";
-        }
-        else if (rndInt == 3) {
-          document.querySelector('#target4').innerHTML = name + ", You are in Hufflepuff";
-        }
-        else {
-          document.querySelector('#target4').innerHTML = name + ", You are in Ravenclaw";
-        }
+  // part 4
+  const name = prompt('What is your name? ')
+  const rndInt = Math.floor(Math.random() * 4) + 1
+  if (rndInt == 1) {
+    document.querySelector('#target4').innerHTML = name + ", You are in Gryffindor";
+  }
+  else if (rndInt == 2) {
+    document.querySelector('#target4').innerHTML = name + ", You are in Slytherin";
+  }
+  else if (rndInt == 3) {
+    document.querySelector('#target4').innerHTML = name + ", You are in Hufflepuff";
+  }
+  else {
+    document.querySelector('#target4').innerHTML = name + ", You are in Ravenclaw";
+  }
 
-        //part 5
-        function leapYear(year) {
-          if ((0 == year%4) && (0 != year % 100) || (0 == year % 400)) {
-            document.querySelector('#target5').innerHTML = year + ", is a leap year";
-          }
-          else {
-            document.querySelector('#target5').innerHTML = year + ", is not a leap year";
-          }
-        }
+  //part 5
+  function leapYear(year) {
+    if ((0 == year%4) && (0 != year % 100) || (0 == year % 400)) {
+      document.querySelector('#target5').innerHTML = year + ", is a leap year";
+    }
+    else {
+      document.querySelector('#target5').innerHTML = year + ", is not a leap year";
+    }
+  }
 
-        const year = prompt('Enter a year: ')
-        leapYear(year)
-         */
+  const year = prompt('Enter a year: ')
+  leapYear(year)
 
-        // part 6
-        const confirmation = confirm('Should I calculate the square root?')
-        if (confirmation == true) {
-          num = parseInt(prompt("enter a number to be squared: "))
-          if (0 > num) {
-            document.querySelector('#target6').innerHTML = "The square root of a negative number is not defined";
-          }
-          else {
-            square = Math.sqrt(num)
-            document.querySelector('#target6').innerHTML = "The square root is : " + square;
-          }
+  // part 6
+  const confirmation = confirm('Should I calculate the square root?');
+  if (confirmation == true) {
+    num = parseInt(prompt('enter a number to be squared: '));
+    if (0 > num) {
+      document.querySelector('#target6').innerHTML = 'The square root of a negative number is not defined';
+    } else {
+      square = Math.sqrt(num);
+      document.querySelector('#target6').innerHTML = 'The square root is : ' + square;
+    }
 
-        }
-        else {
-          document.querySelector('#target6').innerHTML = "The square root is not calculated.";
-        }
+  } else {
+    document.querySelector('#target6').innerHTML = 'The square root is not calculated.';
+  }
+   */
 
+  // part 7
+  function rollDice(dice) {
+    const diceRoll = Math.floor(Math.random() * 6) + 1;
+    let total = 0;
+    for (let i = 0; i < dice; i++) {
+      total += diceRoll
+    }
+    return total
+  }
 
-    </script>
+  dice = parseInt(prompt('How many dice would you like to roll? '));
+  output = rollDice(dice);
+  document.querySelector('#target7').innerHTML = 'The result is ' + output;
+
+</script>
 
 </body>
 </html>
