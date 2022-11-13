@@ -11,6 +11,7 @@
 <p id="target3"></p>
 <p id="target4"></p>
 <p id="target5"></p>
+<p id="target6"></p>
     <script>
         /*
         'use strict';
@@ -50,7 +51,6 @@
         else {
           document.querySelector('#target4').innerHTML = name + ", You are in Ravenclaw";
         }
-         */
 
         //part 5
         function leapYear(year) {
@@ -64,6 +64,24 @@
 
         const year = prompt('Enter a year: ')
         leapYear(year)
+         */
+
+        // part 6
+        const confirmation = confirm('Should I calculate the square root?')
+        if (confirmation == true) {
+          num = parseInt(prompt("enter a number to be squared: "))
+          if (0 > num) {
+            document.querySelector('#target6').innerHTML = "The square root of a negative number is not defined";
+          }
+          else {
+            square = Math.sqrt(num)
+            document.querySelector('#target6').innerHTML = "The square root is : " + square;
+          }
+
+        }
+        else {
+          document.querySelector('#target6').innerHTML = "The square root is not calculated.";
+        }
 
 
     </script>
