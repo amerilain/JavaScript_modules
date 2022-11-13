@@ -5,6 +5,38 @@
     <title>Title </title>
 </head>
 <body>
+<p id="target"></p>
+<p id="target1"></p>
+<p id="target2"></p>
+<p id="target3"></p>
+    <script>
+        /*
+        'use strict';
+        // part 1
+        console.log("I have awaken")
+
+        //part 2
+        const name = prompt('type your name');
+        console.log('Nice to meet you, ' + name)
+        document.querySelector('#target').innerHTML = 'Hello, ' + name + '!';
+         */
+
+        // part 3
+        const int1 = parseInt(prompt('enter a number: '));
+        const int2 = parseInt(prompt('enter a number: '));
+        const int3 = parseInt(prompt('enter a number: '));
+
+        sum = int1 + int2 + int3;
+        product = int1 * int2 * int3;
+        average = sum / 3;
+
+        document.querySelector('#target1').innerHTML = 'sum =' + " " + sum;
+        document.querySelector('#target2').innerHTML = 'product =' + " " + product;
+        document.querySelector('#target3').innerHTML = 'average =' + " " + average;
+
+
+
+    </script>
 
 </body>
 </html>
